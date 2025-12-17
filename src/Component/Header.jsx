@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Logo from '../assets/Logo5.jpg';
 import { Link } from 'react-router-dom';
 
-// Pages + routes
+
 const pages = [
   { name: "Home", path: "/" },
   { name: "About", path: "/About" },
@@ -34,7 +34,7 @@ function Header() {
 
   return (
     <div>
-      {/* Logo Hover Style */}
+      
       <style>
         {`
           .logo-hover:hover {
@@ -48,7 +48,6 @@ function Header() {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
 
-            {/* LOGO + Redirect to Home */}
             <Link to="/" style={{ textDecoration: "none" }}>
               <img
                 src={Logo}
@@ -64,7 +63,7 @@ function Header() {
               />
             </Link>
 
-            {/* MOBILE MENU ICON */}
+         
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
               <IconButton
                 size="large"
@@ -76,7 +75,7 @@ function Header() {
                 <MenuIcon />
               </IconButton>
 
-              {/* MOBILE MENU */}
+             
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -129,7 +128,7 @@ function Header() {
               </Menu>
             </Box>
 
-            {/* DESKTOP MENU */}
+           
             <Box
               sx={{
                 flexGrow: 1,
