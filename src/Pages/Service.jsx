@@ -119,6 +119,66 @@ function Service() {
           font-weight: 600;
         }
 
+        /* ================= CUSTOMER REVIEWS ================= */
+        .reviews {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 30px;
+          margin-top: 50px;
+        }
+
+        .review-card {
+          background: white;
+          border-radius: 22px;
+          padding: 35px 30px;
+          box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+          transition: transform 0.4s ease, box-shadow 0.4s ease;
+          position: relative;
+        }
+
+        .review-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+        }
+
+        .review-text {
+          font-size: 15px;
+          line-height: 1.7;
+          color: #6c757d;
+          margin-bottom: 25px;
+        }
+
+        .review-user {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .review-user img {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid #0d6efd;
+        }
+
+        .review-user h6 {
+          margin: 0;
+          font-weight: 600;
+        }
+
+        .review-user span {
+          font-size: 13px;
+          color: #6c757d;
+        }
+
+        .review-stars {
+          color: #ffc107;
+          margin-bottom: 15px;
+          font-size: 18px;
+        }
+
+
         /* STATS */
         .stats {
           display: grid;
@@ -259,6 +319,67 @@ function Service() {
             <div className="service-img-card">
               <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="Modern Glass Interior" />
               <div className="service-img-overlay"><h5>Modern Glass Interiors</h5></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CUSTOMER REVIEWS ================= */}
+      <section className="section">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2>What Our Customers Say</h2>
+            <p className="text-muted">
+              Trusted by homeowners and businesses
+            </p>
+          </div>
+
+          <div className="reviews">
+
+            <div className="review-card">
+              <div className="review-stars">★★★★★</div>
+              <p className="review-text">
+                Patel Glass Work did an amazing job on our office partitions.
+                The finish is premium and the installation was very professional.
+              </p>
+              <div className="review-user">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer" />
+                <div>
+                  <h6>Rajesh Patel</h6>
+                  <span>Office Owner</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="review-card">
+              <div className="review-stars">★★★★★</div>
+              <p className="review-text">
+                Excellent quality glass railings for our balcony.
+                Strong, safe and very stylish. Highly recommended!
+              </p>
+              <div className="review-user">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer" />
+                <div>
+                  <h6>Pooja Shah</h6>
+                  <span>Home Owner</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="review-card">
+              <div className="review-stars">★★★★☆</div>
+              <p className="review-text">
+                Very neat shower glass work. Clean installation and on-time delivery.
+                Good experience overall.
+              </p>
+              <div className="review-user">
+                <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Customer" />
+                <div>
+                  <h6>Amit Verma</h6>
+                  <span>Interior Client</span>
+                </div>
+              </div>
             </div>
 
           </div>
